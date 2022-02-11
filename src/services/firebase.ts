@@ -13,6 +13,16 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID
 };
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyA001Rfa30_l2Lj_aRR5KpasOfwOdKK4gY",
+//   authDomain: "letmeask-project-7c338.firebaseapp.com",
+//   databaseURL: "https://letmeask-project-7c338-default-rtdb.firebaseio.com",
+//   projectId: "letmeask-project-7c338",
+//   storageBucket: "letmeask-project-7c338.appspot.com",
+//   messagingSenderId: "654534914172",
+//   appId: "1:654534914172:web:baaf010093a29e907f59f9"
+// };
+
 firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
