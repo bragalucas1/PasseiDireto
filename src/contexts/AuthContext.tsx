@@ -1,3 +1,6 @@
+/*Compartilhamento de informações entre os componentes do React.*/
+
+
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { auth, firebase } from "../services/firebase";
 

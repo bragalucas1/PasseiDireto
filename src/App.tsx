@@ -7,6 +7,7 @@ import { NewRoom } from './pages/NewRoom';
 // import { auth } from './services/firebase';
 // import firebase from 'firebase';
 import {AuthContextProvider} from './contexts/AuthContext'
+import { Room } from './pages/Room';
 
 // type User = {
 //   id: string, name: string, avatar: string;
@@ -24,7 +25,8 @@ function App(){
     <AuthContextProvider>
       <Routes>
           <Route path="/"  element={<Home />} />
-          <Route path = "/rooms/new" element ={<NewRoom />} />
+          <Route path = "/rooms/new"   element ={<NewRoom />} />
+          <Route path = "/rooms/:id" element = {<Room/>}/>
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>
