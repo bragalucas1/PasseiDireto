@@ -38,6 +38,9 @@ export function Login(){
             </aside>
             <main>
                 <div className='main-content'>
+                    <div className ='negrito'>
+                        <strong>Bem vindo novamente!</strong>
+                    </div>
                     <button  onClick = {handleSucessfullAccess} className='create-room'>
                         <img src = {GoogleIcon} alt = "google icon" />
                         Entre com o google 

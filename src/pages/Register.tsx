@@ -35,8 +35,8 @@ export function Register(){
             </aside>
             <main>
                 <div className='main-content'>
-                     <div className='separator'>
-                        Registre-se e contribua conosco
+                     <div className='teste'>
+                        <strong>Registre-se e contribua conosco</strong>
                     </div> 
                      <form onSubmit={handleCreateAccount}>
                         <input
