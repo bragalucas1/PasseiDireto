@@ -7,7 +7,6 @@ import '../styles/auth.scss';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
-import { userInfo } from 'os';
 
 export function NewRoom(){
     const {user} = useAuth();
@@ -30,15 +29,11 @@ export function NewRoom(){
     return(
         <div id ="page-auth">
             <aside>
-                <img src = {IllustrationImg} alt = "question and answer"/>
                 <strong>Crie salas de Q&amp;A ao vivo</strong>
                 <p>Tire suas dúvidas da sua audiência em tempo real.</p>
             </aside>
             <main>
-                {/* <h1>value</h1> */}
                 <div className='main-content'>
-                    <img src = {LogoImg} alt = "imagem de logo" />
-                    {/* <h1>{user?.name}</h1> */}
                     <h2>Criar uma nova sala</h2>
                     <form onSubmit={handleCreateRoom}>
                         <input 
