@@ -1,1 +1,2 @@
-# letmeask
+# Passei Direto
+Here, we got a project of a Hub with tests, exercise's list and other avaliative documents from the UFV's classes. The project where made to the classe of Software Engineering. As our project has a complexity of large back and front end, we decide to separate both of them and work as mini-teams inside of the proper team, using a Scrum principle - another subject of the class. Here, we tried to recreate the interfaces and pages that we made with Figma.
