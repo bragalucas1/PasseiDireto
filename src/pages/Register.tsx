@@ -1,8 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { FormEvent, useContext, useState } from 'react';
-import IllustrationImg from '../assets/images/illustration.svg';
-import LogoImg from '../assets/images/logo.svg';
-import GoogleIcon from '../assets/images/google-icon.svg';
+import { FormEvent,useState } from 'react';
 import '../styles/register.scss';
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
@@ -24,7 +21,7 @@ export function Register(){
             title: newUser,
             authorId: user?.id
         })
-        navigate(`/rooms/${firebaseRoom.key}`)
+        navigate('/menu');
     }
     
     return(

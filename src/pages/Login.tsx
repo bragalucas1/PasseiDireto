@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FormEvent, useContext, useState } from 'react';
 import GoogleIcon from '../assets/images/google-icon.svg';
 import '../styles/auth.scss';
@@ -18,7 +18,7 @@ export function Login(){
         }
         navigate('/menu');
     }
-    async function handleJoinSucessfull(event: FormEvent){
+    async function handleJoinSucessfull(event: FormEvent): Promise<void>{
         event.preventDefault();  //previne o redirecioamento automatico 
         if(email.trim() === ''){
             return;
@@ -41,7 +41,7 @@ export function Login(){
                     <div className ='negrito'>
                         <strong>Bem vindo novamente!</strong>
                     </div>
-                    <button  onClick = {handleSucessfullAccess} className='create-room'>
+                    <button  onClick = {handleSucessfullAccess} className='goto-menu'>
                         <img src = {GoogleIcon} alt = "google icon" />
                         Entre com o google 
                     </button>
@@ -61,6 +61,7 @@ export function Login(){
                         />
                         <Button type='submit'>Entrar</Button>   
                     </form>
+                    <p>Não possui uma conta? <Link to = "/register">Registre-se</Link></p>
                 </div>
             </main>
         </div>
