@@ -1,7 +1,18 @@
-import foto from '../assets/images/uploadaluno.jpeg';
-export function Upload(){
+import { Link, useNavigate } from "react-router-dom";
+import '../styles/navbar.css';
+import foto from '../assets/images/listardisciplina.jpeg';
+import { useState } from "react";
+export function MenuAluno(){
+
+    const navigate = useNavigate();
+    const [query, setQuery] = useState('');
+    async function handleQueryInput(){
+        console.log(query);
+        navigate('/queryResult');
+    }
+    
     return (
-        <div className="wrapper">
+    <div className="wrapper">
         <div className="sidebar">
             <ul>
                 <li>Lista</li>
@@ -9,11 +20,6 @@ export function Upload(){
                 <li>Prova 2</li>
                 <li>Prova 3</li>
             </ul> 
-        <div className="social_media">
-          <a href="#"><i className="fab fa-facebook-f"></i></a>
-          <a href="#"><i className="fab fa-twitter"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
-      </div>
     </div>
     <div className="main_content">
         <header>
@@ -25,12 +31,19 @@ export function Upload(){
                     <li><a href="/Disciplinas"><i className="fas fa-address-card"></i>Disciplinas</a></li>
                     <li><a href="/Salvos"><i className="fas fa-project-diagram"></i>Salvos</a></li>
                     <li><a href="/Upload"><i className="fas fa-blog"></i>Criar</a></li>
-                    <input type="text" id="myInput" placeholder="Nome/código da disciplina "/>
+                    <form onSubmit={handleQueryInput}>
+                        <input 
+                        type="text" id="myInput" 
+                        placeholder="Nome/código da disciplina"
+                        onChange={event => setQuery(event.target.value)}
+                        value = {query}
+                        />
+                    </form>
                 </ul>
             </nav>
         </header>
         <div className="portrait"> 
-            <img src ={foto} alt="disciplina"/>
+            <img src ={foto}  alt="disciplina"/>
         </div>
     </div>
 </div>

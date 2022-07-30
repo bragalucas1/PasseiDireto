@@ -16,7 +16,7 @@ export function Login(){
         if(!user){
            await signInWithGoogle();
         }
-        navigate('/menu');
+        navigate('/menu/aluno');
     }
     async function handleJoinSucessfull(event: FormEvent): Promise<void>{
         event.preventDefault();  //previne o redirecioamento automatico 

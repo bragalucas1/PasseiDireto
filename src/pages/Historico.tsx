@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom";
-import '../styles/navbar.css';
-export function Menu(){
-    return (
+import foto from '../assets/images/profaprova1.jpeg';
+export function Historico(){
+    return(
         <div className="wrapper">
         <div className="sidebar">
             <ul>
-                <li>Lista</li>
-                <li>Prova 1</li>
-                <li>Prova 2</li>
-                <li>Prova 3</li>
-                <li>PQP</li>
-            </ul> 
+                <li><strong>Histórico</strong></li>
+            </ul>
+            <ul>
+                <li>* Prova MAT 666</li>
+                <li>* Prova 2</li>
+                <li>* Prova 3</li>
+            </ul>
+        <strong>VER MAIS</strong>
         <div className="social_media">
           <a href="#"><i className="fab fa-facebook-f"></i></a>
           <a href="#"><i className="fab fa-twitter"></i></a>
@@ -31,10 +32,10 @@ export function Menu(){
                 </ul>
             </nav>
         </header>
-        <div> 
-            <h1>OLA</h1>  
+        <div className="portrait"> 
+            <img src ={foto}  alt="disciplina"/>
         </div>
     </div>
 </div>
-);
+    );
 }

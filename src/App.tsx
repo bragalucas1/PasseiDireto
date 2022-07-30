@@ -1,16 +1,15 @@
 import { Login } from './pages/Login'
-// import {createContext, useState, useEffect} from 'react' //use effect = hook pra disparo de efeitos colaterais - funcionalidades - dispara uma  função sempre que algo acontecer
-// //informaçao mudar ou componente for mostrado em tela.
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { NewRoom } from './pages/NewRoom';
-// import { auth } from './services/firebase';
-// import firebase from 'firebase';
 import {AuthContextProvider} from './contexts/AuthContext'
-import { Menu } from './pages/Menu';
+import { MenuAluno } from './pages/MenuAluno';
 import { Register } from './pages/Register';
 import { Upload } from './pages/Upload';
 import { Download } from './pages/Download';
 import { Chat } from './pages/Chat';
+import { AdminRoom } from './pages/AdminRoom';
+import { Historico } from './pages/Historico';
+import { AdminCreate } from './pages/AdminCreate';
+import { FiltrarResult } from './pages/FiltrarResult';
 
 function App(){
   return (
@@ -18,18 +17,22 @@ function App(){
     <BrowserRouter>
     <AuthContextProvider>
       <Routes>
-          <Route path="/"  element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path = "/register" element ={<Register/>}/>
-          <Route path = "/menu" element ={<Menu/>}/>
+          <Route path = "/menu/aluno" element ={<MenuAluno/>}/>
           <Route path = "/upload" element ={<Upload/>}/>
           <Route path = "/download" element ={<Download/>}/>
           <Route path = "/chat" element ={<Chat/>}/>
-          {/* <Route path = "/rooms/new"   element ={<NewRoom />} /> */}
+          <Route path = "/admin/dashboard" element ={<AdminRoom/>}/>
+          <Route path = "/admin/criar" element ={<AdminCreate/>}/>
+          <Route path = "/historico" element ={<Historico/>}/>
+          <Route path = "/queryresult" element ={<FiltrarResult/>}/>
+          <Route path = "/Disciplinas" element ={<MenuAluno/>}/>
+
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>
     
   );
 }
-
 export default App;

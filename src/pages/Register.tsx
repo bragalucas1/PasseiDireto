@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FormEvent,useState } from 'react';
 import '../styles/register.scss';
 import { Button } from '../components/Button';
@@ -6,6 +6,7 @@ import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 
 export function Register(){
+
     const {user} = useAuth();
     const [newUser, setUserName] = useState('');
     const navigate = useNavigate();
@@ -50,7 +51,8 @@ export function Register(){
                         type = "password"
                         placeholder = "Digite sua senha"
                         />
-                        <Button type='submit' color='000000'>Registrar</Button>   
+                        <Button type='submit' color='000000'>Registrar</Button>
+                        <p>Já possui uma conta? <Link to = "/">Entre ja!</Link></p>   
                     </form> 
                 </div>
             </main>

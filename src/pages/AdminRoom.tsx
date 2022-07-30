@@ -1,24 +1,23 @@
-import foto from '../assets/images/downlaodaluno.jpeg';
-export function Download(){
-    
-    return (
+import foto from '../assets/images/profaprova1.jpeg';
+export function AdminRoom(){
+    return(
         <div className="wrapper">
         <div className="sidebar">
-            <ul>
-                <li><strong>INF 221</strong></li>
+        <ul>
+                <li><strong>Histórico</strong></li>
             </ul>
             <ul>
-                <li><strong>Provas</strong></li>
-                <li>* Prova 1</li>
+                <li><strong>Aprovações</strong></li>
+                <li>* Prova MAT 666</li>
                 <li>* Prova 2</li>
                 <li>* Prova 3</li>
             </ul>
-            <ul>
-                <li><strong>Listas</strong></li>
-                <li>* Prova 1</li>
-                <li>* Prova 2</li>
-                <li>* Prova 3</li>
-            </ul>
+        <strong>VER MAIS</strong>
+        <div className="social_media">
+          <a href="#"><i className="fab fa-facebook-f"></i></a>
+          <a href="#"><i className="fab fa-twitter"></i></a>
+          <a href="#"><i className="fab fa-instagram"></i></a>
+      </div>
     </div>
     <div className="main_content">
         <header>
@@ -34,8 +33,8 @@ export function Download(){
                 </ul>
             </nav>
         </header>
-        <div className="portrait"> 
-            <img src ={foto}  alt="disciplina"/>
+        <div className= "portrait"> 
+            <img src ={foto} alt="disciplina"/>
         </div>
     </div>
 </div>

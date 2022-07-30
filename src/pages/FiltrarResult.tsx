@@ -1,24 +1,22 @@
-import foto from '../assets/images/downlaodaluno.jpeg';
-export function Download(){
-    
-    return (
-        <div className="wrapper">
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import foto from '../assets/images/FILTRAR.jpeg';
+export function FiltrarResult(){
+   
+    return(
+    <div className="wrapper">
         <div className="sidebar">
             <ul>
-                <li><strong>INF 221</strong></li>
-            </ul>
-            <ul>
-                <li><strong>Provas</strong></li>
-                <li>* Prova 1</li>
-                <li>* Prova 2</li>
-                <li>* Prova 3</li>
-            </ul>
-            <ul>
-                <li><strong>Listas</strong></li>
-                <li>* Prova 1</li>
-                <li>* Prova 2</li>
-                <li>* Prova 3</li>
-            </ul>
+                <li>Lista</li>
+                <li>Prova 1</li>
+                <li>Prova 2</li>
+                <li>Prova 3</li>
+            </ul> 
+        <div className="social_media">
+          <a href="#"><i className="fab fa-facebook-f"></i></a>
+          <a href="#"><i className="fab fa-twitter"></i></a>
+          <a href="#"><i className="fab fa-instagram"></i></a>
+      </div>
     </div>
     <div className="main_content">
         <header>
@@ -39,5 +37,5 @@ export function Download(){
         </div>
     </div>
 </div>
-    );
+);
 }
